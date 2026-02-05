@@ -1,0 +1,29 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('financialChart').getContext('2d');
+
+    // Dados fictícios para o gráfico
+    var data = {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+        datasets: [{
+            label: 'Despesas',
+            data: [500, 700, 800, 600, 900],
+            backgroundColor: 'rgba(255, 215, 0, 0.6)' // Amarelo transparente
+        }]
+    };
+
+    // Configurações do gráfico
+    var options = {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    // Criando o gráfico
+    var financialChart = new Chart(ctx, {
+        type: 'bar', // Tipo de gráfico
+        data: data,
+        options: options
+    });
+});

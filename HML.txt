@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Money Finanças</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Old Money Finanças</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Bem-vindo ao seu Planejamento Financeiro</h2>
+            <p>Organize sua mente e bem-estar financeiro.</p>
+        </section>
+        <section class="form">
+            <h3>Crie sua Planilha de Orçamento</h3>
+            <form>
+                <label for="income">Salário Mensal:</label>
+                <input type="number" id="income" name="income" required>
+                
+                <label for="debt">Dívidas:</label>
+                <input type="number" id="debt" name="debt" required>
+                
+                <label for="goals">Metas Financeiras:</label>
+                <textarea id="goals" name="goals" rows="4" required></textarea>
+                
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+        <section class="chart-section">
+            <h3>Progresso Financeiro</h3>
+            <canvas id="financialChart"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
